@@ -1,0 +1,31 @@
+Postgresql Sequence Kullanımı
+Sequence Artıis Miktaridir
+Increment = Artis Miktari
+Start = Baslangic Degeri
+Minvalue = En Az insert edilecek Veri
+Maxvalue = En Fazla insert edilecek Veri
+Cycle | No Cycle = Maxvalue Degeri Bittiginde Basa Donülsün mü
+Cache = ön bellekte veri tutar
+
+Crerate Table testing (id init);
+
+Create Sequence test_id INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 10 CYCLE OWNED BY testing.id ; 
+
+INSERT INTO testing VALUES (NEXTVAL(‘test_id’))
+SELECT * FROM testing ;
+İd
+1
+
+NEXTVAL = ıncrement değerini ilerletir
+CURRVAl = en son değer neyse onu yazar
+
+SELECT NEXTVAL(‘test_id’) ;
+SELECT CURRVAL(‘test_id’) 
+
+
+
+
+
+
+
+
